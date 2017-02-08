@@ -33,7 +33,7 @@ window.onload=function(){
         }
         
         ic('clockdiv', et);
-    })(new Date(2016,12,3,0,0,0)); // 年, 月-1, 日, 時, 分, 秒.
+    })(new Date(2017,4,3,0,0,0)); // 年, 月-1, 日, 時, 分, 秒.
 
 
 }
