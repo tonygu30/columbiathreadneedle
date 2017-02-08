@@ -1,0 +1,513 @@
+@charset "utf-8";
+@import url("reset.css");
+
+@font-face {
+    font-family: "LED";
+    src: url(../font/LED.ttf);
+}
+/* CSS Document */
+
+.clockdiv {
+    font-family: "LED";
+    font-size: 60px;
+    position: absolute;
+    top: 446px;
+    right: -60px;
+    letter-spacing: 0.685em;
+    width: 713px;
+    /* overflow: hidden; */
+    /* height: 141px; */
+}
+.id3_iconbox span {
+    position: absolute;
+}
+.id3_iconbox>div {
+    padding-left: 15px;
+    float: left;
+    height: 136px;
+    width: 136px;
+    border-radius: 136px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+body {
+    font-family: 微軟正黑體;
+    background-image: url(../images/bg_index.png);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.down_box {
+    padding-bottom: 25px;
+}
+a{
+    text-decoration:none;
+}
+ul.menu li a {
+    color: #fff;
+}
+
+.dota_pic1 {
+    width: 800px;
+    height: 622px;
+    position: relative;
+    margin: 0 auto;
+}
+.dota_pic1>* {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.dota_pic2 {
+    width: 800px;
+    height: 630px;
+    position: relative;
+    margin: 0 auto;
+}
+.dota_pic2>* {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.b_bar_box {
+    position: fixed;
+    right: -80px;
+    top: 150px;
+    transition: all 0.5s;
+    width: 51px;
+    height: 414px;
+    border-radius: 40px 0px 0px 40px;
+    padding: 49px 23px;
+        z-index: 3;
+}
+
+@keyframes runing {
+    0%   {transform: scale(1);}
+    50%  {transform: scale(1);}
+    75%  {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+
+.yy{
+    background-image:url(../images/run_ybg.jpg);
+}
+
+
+
+
+.f_Circles div.runing {
+    background-image: url(../images/run_3.gif);
+    animation-name: runing;
+    animation-duration: 3s;
+}
+
+.f_Circles div.runing1 {
+    background-image: url(../images/run_2.gif);
+    animation-name: runing;
+    animation-duration: 3s;
+}
+
+.f_Circles div.runing2 {
+    background-image: url(../images/run_1.gif);
+    animation-name: runing;
+    animation-duration: 3s;
+}
+.f_Circles div.runing3 {
+    background-image: url(../images/run_4.gif);
+    animation-name: runing;
+    animation-duration: 3s;
+}
+
+
+
+
+span.bar_yellow img {
+    top: -319px;
+    position: absolute;
+    transition: all .5s;
+    padding:0px;
+}
+b.b_bar_box div {
+    margin-bottom: 70px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50px;
+    overflow: hidden;
+}
+span.bar_yellow {
+    width: 6px;
+    height: 319px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    top: 98px;
+    left: 46px;
+    z-index: -1;
+    overflow:hidden;
+    transition: all .2s;
+}
+
+
+
+.bi{
+    right:0px;
+}
+
+
+
+.title {
+    font-size: 32px;
+    font-family: 微軟正黑體;
+    font-weight: bold;
+    color: #333333;
+    height: 52px;
+    background-image: url(../images/line.png);
+    background-repeat: no-repeat;
+    background-position: 0px 47px;
+    padding-bottom: 13px;
+}
+.index_textbox3 {
+    width: 665px;
+    float: right;
+}
+
+#kv ul img{
+	width:100%;
+}
+.footer {
+    background: #555555;
+    padding: 20px 0px;
+    color: #fff;
+    position: relative;
+    min-width: 1240px;
+}
+
+.footer p {
+    width: 853px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 150%;
+    font-weight: lighter;
+}
+div#fb {
+
+    float: left;
+    line-height: 80px;
+    height: 60px;
+    width: 132px;
+    text-align:center;
+}
+
+
+
+.index_textbox2 {
+    width: 550px;
+}
+
+div.contant {
+    width: 1000px;
+    overflow: hidden;
+    margin: 65px auto 0px auto;
+    line-height: 180%;
+    position: relative;
+}
+div.contant h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #66D7FC;
+    padding: 15px 0px 25px 0px;
+}
+
+.point_3 {
+    position: absolute;
+    right: 55px;
+    top: 0;
+}
+
+.c_box {
+    position: relative;
+    padding-bottom: 80px;
+}	
+
+.c_box {
+    position: relative;
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+}
+.run {
+    
+}
+
+span.run1 {
+    z-index: -1;
+    position: absolute;
+    top: 135px;
+}
+
+.c_box2 {
+    position: relative;
+    height: 770px;
+    padding-top: 35px;
+ 
+}
+
+.index_textbox4 {
+    width: 712px;
+}
+
+.c_box3 {
+    position: relative;
+  
+}
+
+.index_textbox1 {
+    padding-top: 35px;
+}
+
+span.run2 {
+    position: absolute;
+    top: 85px;
+    z-index: -2;
+}
+
+.contant>* {
+    opacity: 0;
+    transition: all 1s;
+}
+
+a.kvlink {
+    z-index: 555;
+    position: absolute;
+    top: 537px;
+    right: 62px;
+    font-size: 36px;
+    color: #fff;
+    border: 3px solid #fff;
+    display: block;
+    width: 248px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+a.kvlink:hover{
+    background:url(../images/w_bg.png);
+  
+
+}
+.id3_btn {
+    width: 155px;
+    text-align: center;
+    background: #26C9FF;
+    color: #fff;
+    border-radius: 4px;
+    height: 41px;
+    line-height: 41px;
+    float: left;
+    font-size: 22px;
+    font-weight: bold;
+    padding-left: 20px;
+    background-image: url(../images/download.png);
+    background-repeat: no-repeat;
+    background-position: 13px 8px;
+}
+.c_box4 {
+    overflow: hidden;
+    margin-top: 35px;
+    padding-bottom: 400px;
+    width: 712px;
+}
+
+#bar_center{
+    width:1200px;
+    margin:0 auto;
+}
+
+.id3_iconbox {
+    float: right;
+    position: relative;
+}
+
+.id3_iconbox span>* {
+    float: right;
+    margin-left: 35px;
+}
+
+.id3_iconbox span {
+    position: absolute;
+    top: 129px;
+}
+.down_title {
+    background: #006298;
+    color: #fff;
+    padding-left: 66px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 22px;
+    position: relative;
+    background-image: url(../images/d_title_left.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.down_in_box {
+    padding: 35px;
+    box-shadow: 0px 0.5px 11px #333;
+    margin-bottom: 30px;
+    /* display: none; */
+    background: #fff;
+}
+
+.id3_iconbox div::after {
+    content: "";
+    background: #fff;
+    width: 30px;
+    height: 136px;
+    display: block;
+    top: 0;
+    position: absolute;
+    left:-10%;
+    transform: skew(-30deg);
+    opacity: 0;
+    transition: all .5s;
+}
+
+.id3_iconbox div::before {
+    content: "";
+    background: #fff;
+    width: 30px;
+    height: 136px;
+    display: block;
+    top: 0;
+    position: absolute;
+    right:-10%;
+    transform: skew(-30deg);
+    opacity: 0;
+    transition: all .5s;
+}
+
+
+.id3_iconbox div:hover::before{
+    right:110%;
+    opacity:.4;
+}
+
+
+.id3_iconbox div:hover::after{
+    left:110%;
+    opacity:.4;
+}
+
+
+.down_title::after {
+    content: "";
+    width: 22px;
+    height: 21px;
+
+    display: block;
+    float: right;
+    position: relative;
+    top: 18px;
+    right: 25px;
+    background-image: url(../images/down_open.png);
+}
+.title span {
+    height: 40px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 40px;
+    background-position: 0px 8px;
+    margin-left: 8px;
+    position: relative;
+    bottom: -6px;
+}
+div#kv ul li {
+    opacity: 0;
+    transition: all 0.8s;
+    /* display: none; */
+    height: 875px;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    min-width: 1240px;
+    transition:all 2s;
+
+}
+
+div#kv ul li.kv_b {
+
+display:block;
+opacity:1;
+height:875px;
+background-size:cover;
+transition:all 2s;
+}
+.run3 {
+    margin: 192px 0px 95px 0px;
+}
+
+.menu{
+    width:1068px;
+    height: 60px;
+    float:left;
+
+}
+.menu a>.dd2::before {
+    content: "";
+    background-image: url(../images/left_bevel.png);
+    display: block;
+    width: 22px;
+    height: 65px;
+    position:absolute;
+    left:-11px;
+    top:0;
+}
+
+ul.menu>* {
+    float: left;
+    width: 267px;
+    height: 65px;
+    position: relative;
+    text-align: center;
+    line-height: 65px;
+    color: #fff;
+    font-size: 32px;
+}
+
+
+
+.menu a>.dd2::after {
+    content: "";
+    background-image: url(../images/right_bevel.png);
+    display: block;
+    width: 22px;
+    height: 65px;
+    position:absolute;
+    right:-11px;
+    top:0;
+}
+
+li.dd2 {
+    background: #66D7FC;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1400px) {
+
+.slide div{
+	width:1400px;
+}
+
+
+}

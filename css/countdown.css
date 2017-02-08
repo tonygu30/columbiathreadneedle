@@ -1,0 +1,12 @@
+clockdiv, .clockdiv > div {
+    display:block;
+    /* background-color: #66D7FC; */
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    float:left;
+
+}
+
+
+

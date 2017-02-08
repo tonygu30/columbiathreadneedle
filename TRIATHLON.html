@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>天利鐵人賽</title>
+
+<meta name="og:description" content="動一動，青春不要留白，2016年天利盃梅花湖鐵人錦標賽，歡迎您的參加!!" />
+<meta property="og:title" content="天利鐵人賽"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="http://demo.www.zhe.tw/tony/demo_iron_man1/index.html"/>
+<meta property="og:image" content="http://demo.www.zhe.tw/tony/demo_iron_man1/images/fb_share.png"/>
+<meta property="og:site_name" content="天利鐵人賽" />
+
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/page.css">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/transit.js"></script>
+<link rel="stylesheet" type="text/css" href="css/countdown.css">
+<script type="text/javascript" src="js/countdown.js"></script>
+<script type="text/javascript" src="js/Respond.js"></script>
+<script type="text/javascript" src="js/Html5shiv.js"></script>
+<script type="text/javascript" src="game2.js"></script>
+
+
+</head>
+
+
+
+<style>
+    
+
+.btn {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 20px;
+    width: 175px;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    color: #fff;
+    overflow: hidden;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    background: #66D7FC;
+    text-transform: uppercase;
+    transition: all 300ms;
+    text-align: center;
+    font-size: 22px;
+}
+
+        .btn::after {
+        position: absolute;
+        content: "";
+        width: 50%;
+        height: 100%;
+        top: 0;
+        left: -60%;
+        background: #fff;
+        opacity: .2;
+        transform: skew(-30deg);
+        transition: all 300ms;
+    }
+
+
+     .btn:hover {
+        color: #fff;
+        background-color:#006298;
+        transition: all 300ms 300ms;
+    }
+
+      .btn:hover::after {
+        left: 110%;
+    }
+    .bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-image: url(images/b_bg.png);
+    z-index:1000;
+    top: 0;
+    display:none;
+
+ 
+}
+.ten_text {
+    width: 700px;
+    height: auto;
+
+    background: #fff;
+    border-radius: 20px;
+    padding: 35px 0px;
+    line-height: 160%;
+    font-family: 微軟正黑體;
+    margin: auto;
+    position: relative;
+    max-height: 800px;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+
+.ten_text img {
+    max-width: 100%;
+    width:100%;
+}
+
+
+
+.ten_text span::before {
+    display: block;
+    width: 4px;
+    height: 20px;
+    background: #333;
+    content: "";
+    margin: 0 auto;
+    transform: rotate(138deg);
+}
+.ten_text span::after {
+    position: absolute;
+    display: block;
+    width: 4px;
+    height: 20px;
+    background: #333;
+    content: "";
+    transform: rotate(-138deg);
+    top: 0;
+ 
+    right: 13px;
+}
+
+.ten_text span {
+    position: relative;
+    top: -19px;
+    right: 20px;
+    float: right;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+}
+
+.api_box {
+    text-align: center;
+    width: 500px;
+    margin: 0 auto 75px auto;
+}
+
+
+
+</style>
+
+
+
+
+<body>
+<div class="bg">
+
+<div class="ten_text"><span></span></div>
+</div>
+<div id="kv" style="line-height:0;position:relative;height:875px">
+    <a href="http://www.pinebridge.com.tw/columbiathreadneedle/index.html" target="_blank"><img src="images/logo1.png" style="position:absolute;top:0;left:35px;z-index:555"></a>
+    <img src="images/timeout_pic.png" style="position:absolute;right:30px;top:120px;z-index:555">
+    <a href="http://www.ctta.org.tw/front/bin/home.phtml" target="_blank"  class="kvlink" >活動詳情請見</a>
+      <div id="clockdiv" class="clockdiv" style="z-index:556">
+      
+          <div>
+            <span class="days"></span>
+
+          </div>
+          <div>
+            <span class="hours"></span>
+
+          </div>
+          <div>
+            <span class="minutes"></span>
+
+          </div>
+          <div>
+            <span class="seconds"></span>
+
+          </div>
+        </div>
+    <ul>
+        <li class="kv_b" style="background-image:url(images/kv_1.png);filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/kv_1.png.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/kv_1.png.png', sizingMethod='scale')";"></li>
+        <li style="background-image:url(images/kv_2.png);filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/kv_2.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/kv_2.png.png', sizingMethod='scale')";"></li>
+        <li style="background-image:url(images/kv_3.png);filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/kv_3.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/kv_3.png.png', sizingMethod='scale')";"></li>
+    </ul>
+</div>
+<div id="menu_out" style="width:100%;height:65px;background:#006298;line-height:0px;z-index:999;min-width:1240px">
+
+
+
+
+
+     <div id="bar_center">
+    <ul class="menu">
+        <a href="#step1"><li class="dd2">天利與鐵人</li></a>
+        <a href="#step2"><li>梅花湖鐵人</li></a>
+        <a href="#step3"><li>天利鐵人營</li></a>
+        <a href="#step4"><li>活動花絮</li></a>
+    </ul>
+    <div id="fb"><a href="http://wwww.facebook.com/share.php?u=http://demo.www.zhe.tw/tony/demo_iron_man1/index.html" target="_blank"><img src="images/fb_door.png"></div></a>
+    </div>
+</div>
+
+<b class="b_bar_box" style="background-image:url(images/b_bar_bg.png)">
+    <span class="f_Circles">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    </span>
+    <span class="bar_yellow"><img src="images/yellow.png"></span>
+</b>
+
+
+<a name="step1" style="display:block;height:40px"></a>
+
+<div class="contant">
+    <div class="title">天利與鐵人<span style="background-image:url(images/title_icon1.png)"></span></div>
+    <div class="index_textbox1">
+        <h3>天利投資認同鐵人精神，長期協助推廣</h3>
+        <p>鐵人三項運動是目前英國參與人數成長最快，也是奧運比賽中成長最快的運動項目，目前已在全球160個地區/國家擁有超過2億粉絲。而台灣鐵人三項活動也愈來愈盛行，根據ITU去年的統計，台灣鐵人三項運動參與人口已躍升至世界第13名，在亞洲僅次日本與韓國，排名3。</p>
+        <br/>
+        <p>源自英國、為全球資產管理集團領導品牌的天利投資(ColumbiaThreadneedle Investments)，認同鐵人三項運動追求的「投(dedication)」、「專注(focus)」與「完成(execution)」，不僅符合天利投資的企業文化，還能促進人們擁有積極正面和健康的生活方式。因此天利投資2013年首次與國際鐵人三項運動聯盟International Triathlon Union(簡稱ITU) 合作，2014再與ITU簽下為期3年的贊助合約。2015年已分別贊助在阿布達比、奧克蘭、紐西蘭、黃金海岸、開普敦、橫濱、倫敦、漢堡、斯德哥爾摩、愛德蒙頓、芝加哥等共9場的ITU世界鐵人三項巡迴賽事，今年6月更將冠名贊助ITU在英國利茲的天利盃國際級鐵人三項運動賽事。</p>
+    </div>
+    <br/>
+    <div class="c_box">
+        <div class="index_textbox2">
+            <p>天利投資不但鼓勵全球的員工與客戶親身參與這項運動，更重要的是天利投 資將推廣鐵人三項運動列為年度企業社會責任的執行項目之一，希望由我們本身產業做起，慢慢再推廣給更多人。
+            </p>
+            <br/>
+            <p>
+                希望再不久的將來，天利投資冠名贊助的”天利盃宜蘭梅花湖鐵人三項錦標賽”能提升成為國際級鐵人三項賽事，吸引全世界的菁英選手及業餘愛好者共襄盛舉。
+            </p>
+        </div>
+        <div class="point_3">
+            <img src="images/3_point.png">
+        </div>
+
+
+   </div>
+
+
+        <div class="run">
+        <img src="images/movement_1.png">
+    </div>
+
+</div>
+
+<a name="step2" style="display:block;height:80px"></a>
+    <div class="contant">
+        <div class="title">天利梅花湖<span style="background-image:url(images/title_icon2.png)" ></span></div>
+        <div class="c_box2">
+            <div class="index_textbox3">
+                <h3>鐵人風潮再襲梅花湖</h3>
+                <p>天利投資是國際鐵人三項運動聯盟International Triathlon Union (簡稱ITU)的全球金融夥伴，集團除了長期贊助國際級鐵人三項運動，更看好台灣對於此項運動未來成長潛力，於2015年首度在台贊助「天利盃2015宜蘭梅花湖鐵人三項錦標賽」活動，且邀請2008年奧運鐵人三項金牌皇后艾瑪．斯諾席爾(Emma Snowsill) 來台，除了希望藉由邀請艾瑪來台經驗交流，且為催生更多台灣鐵人三項奧運選手盡一份心力，活動迴響十分熱切。</p>
+                <br/>
+                <p>天利投資身為台灣第一個積極推廣鐵人三項運動的國際資產管理公司，今年9月3、4日再度與中華民國鐵人三項運動協會合作，冠名贊助「天利盃2016宜蘭梅花湖鐵人三項錦標賽」活動，希望能有更多的鐵人三項菁英運動員與業餘愛好者踴躍參與此類賽事。除了比賽由天利投資冠名，更結合企業文化核心的團隊合作元素，鼓勵客戶和員工一起組隊參賽，天利投資在台合作夥伴－柏瑞投信員工也積極響應、組隊參賽。</p>
+                 
+                 <div style="float:right">
+                 <a class="btn" href="http://www.ctta.org.tw/front/bin/home.phtml" target="_blank">活動詳情請見</a>
+                 </div>
+            </div>
+
+        </div>
+
+        <span class="run1"><img src="images/movement_2.png"></span>
+    </div>
+
+
+<a name="step3" style="display:block;height:80px"></a>
+    <div class="contant">
+        <div class="title">鐵人訓練營<span style="background-image:url(images/title_icon3.png)" ></span></div>
+        <div class="c_box3">
+            <div class="index_textbox4">
+                <h3>「鐵人精神」---永不放棄、堅持到底</h3>
+                <p>天利投資響應即將在2017年在台北舉行的世界大學運動會，且獲得位在金融產業重鎮的信義運動中心大力支持，除了提供場地供選手訓練，更是希望大家能夠堅持到比賽結束。另外透過天利投資分布全 球的資源和過往經驗，設計每周不同的自主及團練課程，一連四個月紮實的訓練項目，從零開始，踏 踏實實，一步一個腳印，循序漸進，讓參與人員能感受到每週的進步，朝著第一張完賽證明前進。 天利投資與大家共勉之~
+                </p>
+
+                </div>
+                </div>
+                <div class="c_box4">
+                    <a href="http://www.pinebridge.com.tw/threadneedle/doc/SelfTrainingSchedule.pdf" target="_blank"><div class="id3_btn">下載請按此</div></a>
+                    <div class="id3_iconbox">
+                   
+                        <div>
+                           <img src="images/swin_icon.png">
+                           
+                        </div>
+                       
+                        <div>
+                           <img src="images/bike_icon.png">
+                           
+                        </div>
+                        
+                        <div>
+                        <img src="images/run_icon.png">
+                        
+                        </div>
+                    </div>
+                </div>
+
+
+
+         <span class="run2"><img src="images/movement_3.png"></span>
+    </div>
+
+<a name="step4" style="display:block;height:80px"></a>
+
+    <div class="contant">
+        <div class="title">活動花絮<span style="background-image:url(images/title_icon4.png)" ></span></div>
+
+        <div class="dd">
+      
+
+        <div class="down_box">
+            <div class="down_title" id="mo2">
+                2016年
+            </div>
+            <div class="down_in_box" id="to2">
+            <div class="dota_pic2">
+                <div style="top:0;left:0"><img src="images/xpic1.jpg"></div>
+                <div style="top:0;right:0"><img src="images/xpic2.jpg"></div>
+                <div style="bottom:0;left:0"><img src="images/xpic3.jpg"></div>
+                <div style="bottom:0;right:0"><img src="images/xpic4.jpg"></div>
+            </div>
+            <div style="text-align: center">
+                <a class="btn" href="https://www.flickr.com/photos/140758075@N06/albums/with/72157667709178122" target="_blank">更多精彩照片</a>
+            </div>
+            </div>
+        </div>
+
+          <div class="down_box">
+            <div class="down_title" id="mo1">
+                2015年
+            </div>
+            <div class="down_in_box" id="to1" >
+            <div class="dota_pic1">
+                <div style="top:0;left:0"><img src="images/pic1.jpg"></div>
+                <div style="top:0;right:0"><img src="images/pic2.jpg"></div>
+                <div style="bottom:0;left:0"><img src="images/pic3.jpg"></div>
+                <div style="bottom:0;right:0"><img src="images/pic4.jpg"></div>
+            </div>
+            <div style="text-align: center">
+                <a class="btn" href="https://www.flickr.com/photos/140758075@N06/albums/72157667709178122" target="_blank">更多精彩照片</a>
+            </div>
+            </div>
+        </div>
+ 
+ 
+    </div>
+        <div class="run3">
+         <img src="images/movement_4.png">
+
+    </div>
+</div>
+
+<div class="api_box">
+<div id="fb-root"><div class="fb-page" data-href="https://www.facebook.com/ColumbiaThreadneedleTAIWAN/?fref=ts" data-tabs="timeline" data-width="500" data-height="300" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/ColumbiaThreadneedleTAIWAN/?fref=ts"><a href="https://www.facebook.com/ColumbiaThreadneedleTAIWAN/?fref=ts">天利鐵人營</a></blockquote></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</div>
+
+
+
+<!--
+<script>
+    $(function(){
+     
+
+     var TT
+     function AAA(){
+        console.log($(".days").text())
+        console.log($(".hours").text())
+        console.log($(".minutes").text())
+        console.log($(".seconds").text())
+        
+        $(".d img").eq(0).attr("src","images/" + ($(".days").text().substr(0,1))+".jpg")
+        $(".d img").eq(1).attr("src","images/" + ($(".days").text().substr(1,1))+".jpg")
+        $(".d img").eq(2).attr("src","images/" + ($(".days").text().substr(2,1))+".jpg")
+
+        $(".h img").eq(0).attr("src","images/" + ($(".hours").text().substr(0,1))+".jpg")
+        $(".h img").eq(1).attr("src","images/" + ($(".hours").text().substr(1,1))+".jpg")
+
+        $(".m img").eq(0).attr("src","images/" + ($(".minutes").text().substr(0,1))+".jpg")
+        $(".m img").eq(1).attr("src","images/" + ($(".minutes").text().substr(1,1))+".jpg")
+
+        $(".s img").eq(0).attr("src","images/" + ($(".seconds").text().substr(0,1))+".jpg")
+        $(".s img").eq(1).attr("src","images/" + ($(".seconds").text().substr(1,1))+".jpg")
+
+        TT=setTimeout(AAA,1000)
+    }
+
+     TT=setTimeout(AAA,1000)
+
+
+     })
+</script>
+
+
+
+
+
+<div class="time line">
+<div class="d">
+     <img src="images/0.jpg">
+     <img src="images/1.jpg">
+     <img src="images/1.jpg">
+</div>
+<div class="h">
+    <img src="images/1.jpg">
+    <img src="images/1.jpg">
+</div>
+<div class="m">
+    <img src="images/1.jpg">
+    <img src="images/1.jpg">
+</div>
+<div class="s">
+    <img src="images/1.jpg">
+    <img src="images/1.jpg">
+</div>
+
+-->
+
+
+<div style="background:#EAEBEB;overflow:hidden">
+    <div style="width: 1000px;margin: 35px auto;line-height: 180%;font-size:14px">
+      <img src="images/logo-pinebridge.png"><br/>
+柏瑞投信為天利投資(Columbia Threadneedle investments)基金在台灣之總代理<br/>
+客服信箱：twn_ecservice@pinebridge.com     客服專線：0800-036-366、02-2516-7883<br/>
+柏瑞證券投資信託股份有限公司 柏瑞投信獨立經營管理<br/>
+台北：104台北市民權東路二段144號10樓 電話：(02)2516-7883 傳真：(02)2516-5383<br/>
+本網站內容受中華民國著作權法保護，為柏瑞投信版權所有。網站內容包含文字、圖像、聲音、視訊、頁面設計等，未經授權不得複製、修改、散發或引用。<br/>
+    </div>
+
+
+</div>
+
+
+
+    <div class="footer">
+        <p>copyright Pinebridge Investments. All rights reserved.<br/>
+建議使用IE9.0以上版本瀏覽器，螢幕解析度設定為1280X768，Adobe Reader 7.0以上版本閱覽文件，可得較佳之效果。</p>
+    </div>
+    </body>
+
+
+
+
+
+</html>
